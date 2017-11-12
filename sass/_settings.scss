@@ -1,0 +1,103 @@
+/*HelveticaNeue*/
+@font-face {
+    font-family: "Helvetica-BdCn";
+    src: url("../fonts/HelveticaNeueLTStd-BdCn.otf") format("opentype");
+}
+@font-face {
+    font-family: "Helvetica-BlkCn";
+    src: url("../fonts/HelveticaNeueLTStd-BlkCn.otf") format("opentype");
+}
+@font-face {
+    font-family: "Helvetica-Cn";
+    src: url("../fonts/HelveticaNeueLTStd-Cn.otf") format("opentype");
+}
+@font-face {
+    font-family: "Helvetica-Lt";
+    src: url("../fonts/HelveticaNeueLTStd-Lt.otf") format("opentype");
+}
+@font-face {
+    font-family: "Helvetica-LtCn";
+    src: url("../fonts/HelveticaNeueLTStd-LtCn.otf") format("opentype");
+}
+@font-face {
+    font-family: "Helvetica-Th";
+    src: url("../fonts/HelveticaNeueLTStd-Th.otf") format("opentype");
+}
+@font-face {
+    font-family: "Helvetica-ThCn";
+    src: url("../fonts/HelveticaNeueLTStd-ThCn.otf") format("opentype");
+}
+@font-face {
+    font-family: "Helvetica-UltLtCn";
+    src: url("../fonts/HelveticaNeueLTStd-UltLtCn.otf") format("opentype");
+}
+/*Bello-Script*/
+@font-face {
+    font-family: "Bello";
+    src: url("../fonts/Bello-Script_6557.ttf") format("truetype");
+}
+/*Helvetica*/
+@font-face {
+    font-family: "Helvetica";
+    src: url("../fonts/9202.otf") format("opentype");
+}
+/*AEmpirial*/
+@font-face {
+    font-family: "AEmp";
+    src: url("../fonts/1987.ttf") format("truetype");
+}
+/*Impact*/
+@font-face {
+    font-family: "Impact";
+    src: url("../fonts/impact.ttf") format("truetype");
+}
+/*sprite*/
+ $mysprite-layout:smart;
+@import "icons/*.png";
+@include all-icons-sprites;
+
+$icons: ('icon-payCard1','icon-payCard2','icon-payCard3','icon-payCard4',
+    'icon-payCard5','icon-payCard6','icon-payCard7','icon-payCard8','icon-payCard9',
+    'icon-payCard10','icon-payCard11','icon-socFooter1','icon-socFooter2',
+    'icon-socFooter3','icon-socFooter4','icon-socFooter5','icon-socFooter6');
+
+@each $icons in $icons {
+    .icons-#{$icons} {
+        display: inline-block;
+        position: relative;
+        width: icons-sprite-width(#{$icons});
+        height: icons-sprite-height(#{$icons});
+          
+        vertical-align: top;
+        display: -moz-inline-stack;
+        zoom: 1;
+        *display: inline;
+    }
+} 
+html, body{height: 100%;}
+html {overflow-x: hidden;}
+body {
+    font-family: Arial, sans-aerif;
+    background: #ffffff;
+    overflow-x: hidden;
+}
+.wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+}
+.content {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+}
+.container {
+	max-width: 1000px;
+	width: 100%;
+	margin: 0 auto;
+}
