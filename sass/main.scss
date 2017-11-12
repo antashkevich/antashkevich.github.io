@@ -629,7 +629,11 @@
 	            		text-transform: uppercase;
 	            		position: absolute;
             		    top: 5px;
-					    left: -45px;					    
+					    left: -45px;	
+				        overflow: inherit;
+					    width: auto;
+					    padding: 0;
+					    margin: 0;				    
 	            	}
 	            }
 	        	img {
@@ -810,7 +814,11 @@
             		text-transform: uppercase;
             		position: absolute;
         		    top: 5px;
-				    left: -45px;					    
+				    left: -45px;	
+			        overflow: inherit;
+				    width: auto;
+				    padding: 0;
+				    margin: 0;				    
             	}
             }
         	img {
